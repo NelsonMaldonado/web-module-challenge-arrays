@@ -158,15 +158,16 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array7,string){
-    let newArr = [];
+    
     for (let i = 0 ; i < array7.length ; i++) {
-        if (array7[i].includes(string)){
-            newArr.splice(string[i],1);
+        if (array7[i]===string){
+            array7.splice(i,1);
         }
     } 
-    return newArr;
+    return array7;
 }    
         removeFlavorByName(originalFlavors,'Rocky Road')
+        console.log(originalFlavors);
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
